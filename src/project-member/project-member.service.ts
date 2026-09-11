@@ -34,7 +34,7 @@ export class ProjectMemberService {
 
     const alreadyAssigned = await this.projectMembModel.findOne({
       developer: dto.developerId,
-      projecct: dto.projectId,
+      project: dto.projectId,
     });
 
     if (alreadyAssigned) {

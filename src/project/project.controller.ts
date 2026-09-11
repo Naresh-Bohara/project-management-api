@@ -1,4 +1,4 @@
-import { Controller, Get, Param, Post } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 import { ProjectService } from './project.service';
 import { CreateProjectDto } from './dto/create-project.dto';
 
@@ -7,7 +7,7 @@ export class ProjectController {
   constructor(private readonly projectService: ProjectService) {}
 
   @Post()
-  createProject(dto: CreateProjectDto) {
+  createProject(@Body() dto: CreateProjectDto) {
     return this.projectService.createProject(dto);
   }
 
