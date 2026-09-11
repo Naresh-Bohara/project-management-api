@@ -7,7 +7,7 @@ export class Developer extends Document {
   name: string;
 
   @Prop({ unique: true, required: true, lowercase: true, trim: true })
-  email: email;
+  email: string;
 
   @Prop({ unique: true, required: true, trim: true })
   empId: string;

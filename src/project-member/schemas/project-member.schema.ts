@@ -30,9 +30,9 @@ export class ProjectMember extends Document {
   allocation: number;
 }
 
-export const ProjectSchemaMember = SchemaFactory.createForClass(ProjectMember);
+export const ProjectMemberSchema = SchemaFactory.createForClass(ProjectMember);
 
-ProjectSchemaMember.index(
+ProjectMemberSchema.index(
   {
     developer: 1,
     project: 1,
